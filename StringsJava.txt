@@ -1,0 +1,383 @@
+//Write a program to check whether given character is present in the given string.
+
+package string;
+
+import java.util.*;
+
+public class String1 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner s=new Scanner(System.in);
+		System.out.println("Please Enter the String:");
+		String st=s.nextLine();
+		//@SuppressWarnings("resource")
+		//Scanner char_add=new Scanner(System.in);
+		System.out.println("Enter the Charecter:");
+		String ch=s.next();
+		char c=ch.charAt(0);
+		for (int a=0;a<st.length();a++)
+		{
+			if (st.charAt(a) == c)
+			{
+				System.out.println("This char "+c+" is present in the given string : "+st);
+			}
+			else
+			{
+				continue;
+			}
+		}
+		/*String s="asdfghk";
+		if(s.indexOf("q")!=-1)
+		{
+			System.out.println("char is present");
+		}
+		else
+		{
+			System.out.println("char is not present");
+		}*/
+	}
+
+}
+
+
+
+
+
+//write a program to count no.of vowels  present in a string and also count no.of constants present in the string.
+
+package string;
+
+import java.util.*;
+
+public class String2 
+{
+	public static void main(String[] args) 
+	{
+		int vowels=0;
+		int  consonents=0;
+		//Enter String....
+		@SuppressWarnings("resource")
+		Scanner st_add=new Scanner(System.in);
+		System.out.println("Enter the String :");
+		String s=st_add.next();
+		for (int a=0;a<s.length();a++)
+		{
+			char c=s.charAt(a);
+			if ((c=='A')||(c=='E')||(c=='I')||(c=='O')||(c=='U')||(c=='a')||(c=='e')||(c=='i')||(c=='o')||(c=='u'))
+			{
+				vowels++;
+			}
+			else
+			{
+				consonents++;
+			}
+		}
+		System.out.println("There are "+vowels+" number of vowels in the given string.");
+		System.out.println("There are "+consonents+" number of consonents in the given string.");
+	}
+
+}
+
+
+
+//write a program to reverse the string.
+
+package string;
+
+import java.util.*;
+
+public class String3 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner st_add=new Scanner(System.in);
+		System.out.println("Enter the String :");
+		String s=st_add.next();
+		int string_len=s.length();
+		for(int a=(string_len-1);a>=0;a--)
+		{
+			char c=s.charAt(a);
+			System.out.print(c);
+		}
+		System.out.println();
+		System.out.println("String has reversed....");
+	}
+}
+
+
+
+//Write a program to count no.of vowels present in a given string.
+package string;
+
+import java.util.*;
+
+public class String4 
+{
+	public static void main(String[] args) 
+	{
+		int occurances=0;
+		@SuppressWarnings("resource")
+		Scanner st_add=new Scanner(System.in);
+		System.out.println("Enter the String :");
+		String s=st_add.next();
+		int string_len=s.length();
+		for(int a=0;a<string_len;a++)
+		{
+			char c=s.charAt(a);
+			if ((c=='A')||(c=='E')||(c=='I')||(c=='O')||(c=='U')||(c=='a')||(c=='e')||(c=='i')||(c=='o')||(c=='u'))
+			{
+				for (int i=0;i<string_len;a++)
+				{
+					occurances++;
+					
+				}
+				System.out.println("Vowel "+c+" repeated for "+occurances+" times");
+			}
+			else
+			{
+				continue;
+			}
+		}
+	}
+
+}
+
+
+//write a program to read a String during runtime and count the given character appearing in string. 
+
+package string;
+
+import java.util.Scanner;
+
+public class String5 
+{
+	public static void main(String[] args) 
+	{
+		int count=0;
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String: ");
+		String s=scan.nextLine();
+		@SuppressWarnings("resource")
+		Scanner charscan=new Scanner(System.in);
+		System.out.println("Enter the charecter: ");
+		String c=charscan.next();
+		char ch=c.charAt(0);
+		int len=s.length();
+		for (int i=0;i<len;i++)
+		{
+			if (s.charAt(i)==ch)
+			{
+				count++;
+			}
+			else 
+			{
+				continue;
+			}
+		}
+		//if(c)
+		System.out.println("Given charecter consists of "+count+" no.of appearing in the given string.");
+		
+	}
+
+}
+
+
+
+
+
+//write a program to print all the vowels present on the given string.
+
+package string;
+
+import java.util.Scanner;
+
+public class String6 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String: ");
+		String s=scan.nextLine();
+		int len=s.length();
+		for (int i=0;i<len;i++)
+		{
+			if (s.charAt(i)=='A'||s.charAt(i)=='E'||s.charAt(i)=='I'||s.charAt(i)=='O'||s.charAt(i)=='U'||s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u')
+			{
+				System.out.println(s.charAt(i));
+			}
+			else 
+			{
+				continue;
+			}
+		}	
+	}
+}
+
+
+
+
+//Write a program to check whether given String is palindrome or not.
+
+package string;
+
+import java.util.Scanner;
+
+public class String7 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String : ");
+		String s1=scan.nextLine();
+		String s2="";
+		for (int i=s1.length()-1;i>=0;i--)
+		{
+			s2=s2+s1.charAt(i);
+		}
+		if(s1.equalsIgnoreCase(s2
+				))
+		{
+			System.out.println("The given String is Palindrom");
+		}
+		else
+		{
+			System.out.println("Given String is not a Palindrom");
+		}
+	}
+}
+
+
+
+/*Write a program to count  no.of digits in the given string.
+ * */
+
+package string;
+
+import java.util.Scanner;
+
+public class String8 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String  s1=scan.nextLine();
+		String[] s=s1.split(" ");
+		System.out.println(s.length);		
+	}
+}
+
+
+
+
+//write a program to split the given string
+
+package string;
+import java.util.Scanner;
+public class String9 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String s1=scan.nextLine();
+		String[] s2=s1.split(" ");
+		for (int i=0;i<=s2.length-1;i++)
+		{
+			System.out.println(s2[i]);
+		}
+	}
+}
+
+
+
+//Write a program to reverse a string in following order
+//"java sql html"
+//"html sql java"
+package string;
+
+import java.util.Scanner;
+
+public class String10 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String");
+		String s1=scan.nextLine();
+		String[] s2=s1.split(" ");
+		String s3="";
+		for (int i=s2.length-1;i>=0;i--)
+		{
+			s3=s3+s2[i];
+			s3=s3+" ";
+		}
+		System.out.println(s3);
+	}
+
+}
+
+
+
+
+package string;
+
+import java.util.Scanner;
+
+public class String11 
+{
+	public static void main(String[] args) 
+	{
+		@SuppressWarnings("resource")
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter the String: ");
+		String s=scan.nextLine();
+		String[] str=s.split(" ");
+		String s1="";
+		String s2="";;
+		for (int i=0;i<=str.length-1;i++)
+		{
+			s1=str[i];
+			for (int j=s1.length()-1;j>=0;j--)
+			{
+				char  ch=s1.charAt(j);
+				s2=s2+ch;
+			}
+			s2=s2+" ";
+		}
+		System.out.println(s2);
+	}
+}
+
+
+
+
+//each and every String method is a non static method
+
+
+package string;
+
+public class Stringmethods 
+{
+	public static void main(String[] args) 
+	{
+		//length method.
+		String s1="Praveen Kumar";
+		int len=s1.length();
+		System.out.println(len);
+		//charAt(index number).
+		String s2="Praveen Kumar";
+		char ch=s2.charAt(10);
+		System.out.println(ch);
+	}
+
+}
